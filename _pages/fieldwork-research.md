@@ -4,6 +4,7 @@ title: "Fieldwork & Research Geography"
 permalink: /fieldwork-research/
 author_profile: true
 ---
+These are countries where I have conducted fieldwork (or visited for fun!)
 
 <div id="africa-map"></div>
 
@@ -33,7 +34,7 @@ L.circleMarker([-12.5, 18.5], {
     fillColor: '#ff5c00',
     fillOpacity: 0.8
 }).addTo(map)
-.bindPopup("<b>Angola</b><br>Elite signaling and political competition");
+.bindPopup("<b>Angola</b>");
 
 L.circleMarker([-22.3, 24.7], {
     radius: 8,
@@ -41,6 +42,30 @@ L.circleMarker([-22.3, 24.7], {
     fillColor: '#ff5c00',
     fillOpacity: 0.8
 }).addTo(map)
-.bindPopup("<b>Botswana</b><br>Geographic variation in political control");
+.bindPopup("<b>Botswana</b>");
+
+L.circleMarker([-22.3, 24.7], {
+    radius: 8,
+    color: '#ff5c00',
+    fillColor: '#ff5c00',
+    fillOpacity: 0.8
+}).addTo(map)
+.bindPopup("<b>South Africa</b>");
+
+L.circleMarker([-22.3, 24.7], {
+    radius: 8,
+    color: '#ff5c00',
+    fillColor: '#ff5c00',
+    fillOpacity: 0.8
+}).addTo(map)
+.bindPopup("<b>Zambia</b>");
+
+L.circleMarker([-22.3, 24.7], {
+    radius: 8,
+    color: '#ff5c00',
+    fillColor: '#ff5c00',
+    fillOpacity: 0.8
+}).addTo(map)
+.bindPopup("<b>Zimbabwe</b>");
 
 </script>
