@@ -6,7 +6,7 @@
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $black                      : #040102;
-$light-gray                 : m#444444;
+$light-gray                 : #444444;
 $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Color codes used for the site */
@@ -38,7 +38,8 @@ $sidebar-screen-min-width   : 1024px;
     --global-link-color-hover           : #ff5c00;
     --global-link-color-visited         : #ff5c00;  
     --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-masthead-link-color-hover  : #ff5c00;   
+    --global-masthead-link-color-visited: #ff5c00;
     --global-text-color                 : #{$black};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
