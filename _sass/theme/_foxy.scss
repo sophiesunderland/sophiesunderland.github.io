@@ -44,3 +44,14 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
 }
+/* Sidebar theme */
+.sidebar a {
+    color: #ff5c00;
+    transition: all 0.15s ease;
+}
+
+.sidebar a:hover {
+    color: #111111;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
