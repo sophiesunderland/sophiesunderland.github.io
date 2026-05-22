@@ -1,7 +1,9 @@
+---
 layout: archive
 title: "Fieldwork & Research Geography"
 permalink: /fieldwork-research/
 author_profile: true
+---
 
 <div id="africa-map"></div>
 
