@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome!"
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -13,21 +13,10 @@ redirect_from:
   <div style="flex: 1 1 300px; min-width: 250px; max-width: 600px;">
     <p>
       I am a third-year PhD student in the Department of Political Science at Michigan State University. 
-      I am also a research assistant for the Analysis Unit at Afrobarometer. Before joining MSU, 
-      I earned both my B.A. and M.A. in Political Science from the University of Florida, with minors 
-      in Latin American and African Studies.
+      I am also a research assistant for the Analysis Unit at [Afrobarometer](https://www.afrobarometer.org/person/sophie-sunderland/)). 
+      I previously earned both my B.A. and M.A. in Political Science from the University of Florida, where I also completed minors in Latin American        and African Studies.
     </p>
     <p>
-      My research focuses on political parties and the dynamics of political competition both within 
-      and between parties. I am also interested in understanding party strategies and behavior outside 
-      of election periods, which I refer to as the “off-season.” My regional specialization is Sub-Saharan 
-      Africa, where I have conducted fieldwork in Angola, South Africa, Zimbabwe, Zambia, and Botswana.
+      My research focuses on how political power is organized, contested, and perceived across space, with a regional focus on Africa. My current           work explores how alignment with executive power shapes how elites signal political standing to voters and other elites, and in turn how these        signals structure patterns of political competition. I also study geographic variation in political control/power and how these dynamics              influence citizens’ perceptions of representation and accountability.
     </p>
   </div>
-
-  <!-- Image column -->
-  <div style="flex: 0 0 250px; text-align: center;">
-    <img src="/images/rb.jpeg" width="250" style="border-radius: 50%;" alt="Jane Doe">
-  </div>
-
-</div>
