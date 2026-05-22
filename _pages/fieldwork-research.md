@@ -44,7 +44,7 @@ L.circleMarker([-22.3, 24.7], {
 }).addTo(map)
 .bindPopup("<b>Botswana</b>");
 
-L.circleMarker([-22.3, 24.7], {
+L.circleMarker([-30.5595, 22.9375], {
     radius: 8,
     color: '#ff5c00',
     fillColor: '#ff5c00',
@@ -52,7 +52,7 @@ L.circleMarker([-22.3, 24.7], {
 }).addTo(map)
 .bindPopup("<b>South Africa</b>");
 
-L.circleMarker([-22.3, 24.7], {
+L.circleMarker([-13.1339, 27.8493], {
     radius: 8,
     color: '#ff5c00',
     fillColor: '#ff5c00',
@@ -60,7 +60,7 @@ L.circleMarker([-22.3, 24.7], {
 }).addTo(map)
 .bindPopup("<b>Zambia</b>");
 
-L.circleMarker([-22.3, 24.7], {
+L.circleMarker([-19.0154, 29.1549], {
     radius: 8,
     color: '#ff5c00',
     fillColor: '#ff5c00',
