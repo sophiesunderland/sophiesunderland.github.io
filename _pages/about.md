@@ -13,7 +13,7 @@ redirect_from:
   <div style="flex: 1 1 300px; min-width: 250px; max-width: 600px;">
     <p>
       I am a third-year PhD student in the Department of Political Science at Michigan State University. 
-      I am also a research assistant for the Analysis Unit at [Afrobarometer](https://www.afrobarometer.org/person/sophie-sunderland/)). 
+      I am also a research assistant for the Analysis Unit at [Afrobarometer](https://www.afrobarometer.org/person/sophie-sunderland/). 
       I previously earned both my B.A. and M.A. in Political Science from the University of Florida, where I also completed minors in Latin American        and African Studies.
     </p>
     <p>
