@@ -11,8 +11,8 @@ main:
   - title: "Fieldwork & Research Geography"
     url: /fieldwork-research/
     
-  - title: "CV"
-    url: /cv/
+ # - title: "CV"
+ #   url: /cv/
     # url:/files/Resume.pdf
     
   # - title: "CV"
