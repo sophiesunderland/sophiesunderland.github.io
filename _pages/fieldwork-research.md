@@ -1,5 +1,5 @@
 layout: archive
-title: "Fieldwork \& Research Geography"
+title: "Fieldwork & Research Geography"
 permalink: /fieldwork-research/
 author_profile: true
 
