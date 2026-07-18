@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Fieldwork & Research Geography"
+title: "Fieldwork & Research Gallery"
 permalink: /fieldwork-research/
 author_profile: true
 ---
