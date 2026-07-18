@@ -1,16 +1,7 @@
----
-permalink: /
-title: "About me"
-author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
----
-
-<div class="row">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
 
   <!-- Left column -->
-  <div class="col-md-8">
+  <div style="flex: 1 1 500px; max-width: 700px;">
 
     <p>
       I am a fourth-year PhD student in the Department of Political Science at Michigan State University.
@@ -25,26 +16,25 @@ redirect_from:
 
   </div>
 
-  <!-- Right column -->
-  <div class="col-md-4">
 
-    <img src="{{ '/images/IMG_4744.jpg' | relative_url }}" 
-         class="img-responsive"
+  <!-- Right column -->
+  <div style="flex: 0 0 100px;">
+
+    <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
          style="width:100%; margin-bottom:15px; border-radius:8px;"
          alt="Research">
 
-    <img src="{{ '/images/IMG_4541.jpg' | relative_url }}" 
-         class="img-responsive"
+    <img src="{{ '/images/IMG_4541.jpg' | relative_url }}"
          style="width:100%; margin-bottom:15px; border-radius:8px;"
          alt="Fieldwork">
 
-    <img src="{{ '/images/IMG_4405.jpg' | relative_url }}" 
-         class="img-responsive"
+    <img src="{{ '/images/IMG_4405.jpg' | relative_url }}"
          style="width:100%; border-radius:8px;"
          alt="Conference">
 
   </div>
 
 </div>
+
 
 
