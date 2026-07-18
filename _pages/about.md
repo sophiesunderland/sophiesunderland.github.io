@@ -10,7 +10,7 @@ redirect_from:
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
 
   <!-- Left column -->
-  <div style="flex: 1 1 400px; max-width: 500px;">
+  <div style="flex: 1 1 300px; max-width: 400px;">
 
     <p>
       I am a fourth-year PhD student in the Department of Political Science at Michigan State University.
@@ -27,7 +27,7 @@ redirect_from:
 
 
 <!-- Right column -->
-<div style="flex: 0 0 380px;">
+<div style="flex: 0 0 400px;">
 
   <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:15px;">
 
