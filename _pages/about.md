@@ -31,41 +31,113 @@ redirect_from:
 
   <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:15px;">
 
-    <figure style="margin:0;">
-      <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
-           style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;"
-           alt="Research">
-      <figcaption style="text-align:center; font-size:0.8em; color:#666;">
-        Luangwa, Zambia
-      </figcaption>
-    </figure>
+<figure style="
+    margin:0;
+    background:white;
+    padding:10px;
+    padding-bottom:18px;
+    border:1px solid #ddd;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transform:rotate(-1deg);
+">
 
-    <figure style="margin:0;">
-      <img src="{{ '/images/IMG_4541.jpg' | relative_url }}"
-           style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;"
-           alt="Fieldwork">
-      <figcaption style="text-align:center; font-size:0.8em; color:#666;">
-        Mosi-oa-Tunya National Park
-      </figcaption>
-    </figure>
+  <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
+       style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+       alt="Research">
 
-    <figure style="margin:0;">
-      <img src="{{ '/images/IMG_4405.jpg' | relative_url }}"
-           style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;"
-           alt="Conference">
-      <figcaption style="text-align:center; font-size:0.8em; color:#666;">
-        Kamwala market, Zambia
-      </figcaption>
-    </figure>
+  <figcaption style="
+      text-align:center;
+      font-size:0.85em;
+      color:#555;
+      margin-top:10px;
+      font-family:'Comic Sans MS', 'Bradley Hand', cursive;
+  ">
+    Luangwa, Zambia
+  </figcaption>
 
-    <figure style="margin:0;">
-      <img src="{{ '/images/IMG_1298.jpg' | relative_url }}"
-           style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px;"
-           alt="Photo">
-      <figcaption style="text-align:center; font-size:0.8em; color:#666;">
-        Kalandula Falls, Angola
-      </figcaption>
-    </figure>
+</figure>
+
+
+<figure style="
+    margin:0;
+    background:white;
+    padding:10px;
+    padding-bottom:18px;
+    border:1px solid #ddd;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transform:rotate(1.5deg);
+">
+
+  <img src="{{ '/images/IMG_4541.jpg' | relative_url }}"
+       style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+       alt="Fieldwork">
+
+  <figcaption style="
+      text-align:center;
+      font-size:0.85em;
+      color:#555;
+      margin-top:10px;
+      font-family:'Comic Sans MS', 'Bradley Hand', cursive;
+  ">
+    Mosi-oa-Tunya National Park
+  </figcaption>
+
+</figure>
+
+
+<figure style="
+    margin:0;
+    background:white;
+    padding:10px;
+    padding-bottom:18px;
+    border:1px solid #ddd;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transform:rotate(-1.5deg);
+">
+
+  <img src="{{ '/images/IMG_4405.jpg' | relative_url }}"
+       style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+       alt="Fieldwork">
+
+  <figcaption style="
+      text-align:center;
+      font-size:0.85em;
+      color:#555;
+      margin-top:10px;
+      font-family:'Comic Sans MS', 'Bradley Hand', cursive;
+  ">
+    Kamwala market, Zambia
+  </figcaption>
+
+</figure>
+
+
+<figure style="
+    margin:0;
+    background:white;
+    padding:10px;
+    padding-bottom:18px;
+    border:1px solid #ddd;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transform:rotate(1deg);
+">
+
+  <img src="{{ '/images/IMG_1298.jpg' | relative_url }}"
+       style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+       alt="Photo">
+
+  <figcaption style="
+      text-align:center;
+      font-size:0.85em;
+      color:#555;
+      margin-top:10px;
+      font-family:'Comic Sans MS', 'Bradley Hand', cursive;
+  ">
+    Kalandula Falls, Angola
+  </figcaption>
+
+</figure>
+
 
   </div>
 
