@@ -4,68 +4,65 @@ title: "Fieldwork & Research Geography"
 permalink: /fieldwork-research/
 author_profile: true
 ---
-These are countries where I have conducted fieldwork (or visited for fun!)
+<div class="photo-grid">
 
-<div id="africa-map"></div>
+  <figure>
+    <img src="{{ '/images/IMG_4774.jpg' | relative_url }}">
+    <figcaption>Luangwa, Zambia</figcaption>
+  </figure>
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet/dist/leaflet.css"
-/>
+  <figure>
+    <img src="{{ '/images/IMG_4541.jpg' | relative_url }}">
+    <figcaption>Mosi-oa-Tunya National Park</figcaption>
+  </figure>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <figure>
+    <img src="{{ '/images/IMG_4405.jpg' | relative_url }}">
+    <figcaption>Kamwala market, Zambia</figcaption>
+  </figure>
 
-<script>
-var map = L.map('africa-map', {
-    zoomControl: false,
-    scrollWheelZoom: false
-}).setView([-15, 24], 4);
+  <figure>
+    <img src="{{ '/images/IMG_1298.jpg' | relative_url }}">
+    <figcaption>Kalandula Falls, Angola</figcaption>
+  </figure>
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-</script>
+</div>
 
-<script>
+<style>
+.photo-grid {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:30px;
+}
 
-L.circleMarker([-12.5, 18.5], {
-    radius: 8,
-    color: '#ff5c00',
-    fillColor: '#ff5c00',
-    fillOpacity: 0.8
-}).addTo(map)
-.bindPopup("<b>Angola</b>");
+.photo-grid figure {
+  background:white;
+  padding:12px;
+  padding-bottom:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  transform:rotate(-1deg);
+}
 
-L.circleMarker([-22.3, 24.7], {
-    radius: 8,
-    color: '#ff5c00',
-    fillColor: '#ff5c00',
-    fillOpacity: 0.8
-}).addTo(map)
-.bindPopup("<b>Botswana</b>");
+.photo-grid figure:nth-child(even) {
+  transform:rotate(1deg);
+}
 
-L.circleMarker([-30.5595, 22.9375], {
-    radius: 8,
-    color: '#ff5c00',
-    fillColor: '#ff5c00',
-    fillOpacity: 0.8
-}).addTo(map)
-.bindPopup("<b>South Africa</b>");
+.photo-grid img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
 
-L.circleMarker([-13.1339, 27.8493], {
-    radius: 8,
-    color: '#ff5c00',
-    fillColor: '#ff5c00',
-    fillOpacity: 0.8
-}).addTo(map)
-.bindPopup("<b>Zambia</b>");
+.photo-grid figcaption {
+  text-align:center;
+  margin-top:10px;
+  font-style:italic;
+  color:#666;
+}
 
-L.circleMarker([-19.0154, 29.1549], {
-    radius: 8,
-    color: '#ff5c00',
-    fillColor: '#ff5c00',
-    fillOpacity: 0.8
-}).addTo(map)
-.bindPopup("<b>Zimbabwe</b>");
-
-</script>
+@media (max-width: 700px) {
+  .photo-grid {
+    grid-template-columns:1fr;
+  }
+}
+</style>
