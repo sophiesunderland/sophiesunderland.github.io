@@ -27,7 +27,7 @@ redirect_from:
 
 
   <!-- Right column -->
-  <div style="flex: 0 0 100px;">
+  <div style="flex: 0 0 250px;">
 
     <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
          style="width:100%; margin-bottom:15px; border-radius:8px;"
