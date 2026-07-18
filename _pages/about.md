@@ -1,3 +1,12 @@
+---
+permalink: /
+title: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
 
   <!-- Left column -->
