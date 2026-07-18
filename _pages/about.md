@@ -28,16 +28,23 @@ redirect_from:
   <!-- Right column -->
   <div class="col-md-4">
 
-    <img src="/images/IMG_4774.jpg" class="img-responsive"
-         style="margin-bottom:15px;" alt="Research">
+    <img src="{{ '/images/IMG_4744.jpg' | relative_url }}" 
+         class="img-responsive"
+         style="width:100%; margin-bottom:15px; border-radius:8px;"
+         alt="Research">
 
-    <img src="/images/IMG_4541.jpg" class="img-responsive"
-         style="margin-bottom:15px;" alt="Fieldwork">
+    <img src="{{ '/images/IMG_4541.jpg' | relative_url }}" 
+         class="img-responsive"
+         style="width:100%; margin-bottom:15px; border-radius:8px;"
+         alt="Fieldwork">
 
-    <img src="/images/IMG_4405_jpg" class="img-responsive"
+    <img src="{{ '/images/IMG_4405.jpg' | relative_url }}" 
+         class="img-responsive"
+         style="width:100%; border-radius:8px;"
          alt="Conference">
 
   </div>
 
 </div>
+
 
