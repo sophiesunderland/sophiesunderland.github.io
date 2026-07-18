@@ -24,3 +24,14 @@ redirect_from:
     </p>
 
 </div>
+
+{% include africa-map.html %}
+
+<div style="flex:0 0 350px;">
+
+<h3 style="margin-top:0;">Research Sites</h3>
+
+<div id="africa-map" style="height:350px; border-radius:10px;"></div>
+
+</div>
+
