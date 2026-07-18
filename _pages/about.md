@@ -10,7 +10,7 @@ redirect_from:
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
 
   <!-- Left column -->
-  <div style="flex: 1 1 500px; max-width: 700px;">
+  <div style="flex: 1 1 400px; max-width: 500px;">
 
     <p>
       I am a fourth-year PhD student in the Department of Political Science at Michigan State University.
@@ -27,19 +27,34 @@ redirect_from:
 
 
   <!-- Right column -->
-  <div style="flex: 0 0 220px;">
+  <div style="flex: 0 0 320px;">
 
-    <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
-         style="width:100%; margin-bottom:15px; border-radius:8px;"
-         alt="Research">
+    <figure style="margin:0 0 25px 0;">
+      <img src="{{ '/images/IMG_4774.jpg' | relative_url }}"
+           style="width:100%; border-radius:8px;"
+           alt="Research">
+      <figcaption style="text-align:center; font-size:0.85em; color:#666;">
+        Luangwa, Zambia
+      </figcaption>
+    </figure>
 
-    <img src="{{ '/images/IMG_4541.jpg' | relative_url }}"
-         style="width:100%; margin-bottom:15px; border-radius:8px;"
-         alt="Fieldwork">
+    <figure style="margin:0 0 25px 0;">
+      <img src="{{ '/images/IMG_4541.jpg' | relative_url }}"
+           style="width:100%; border-radius:8px;"
+           alt="Fieldwork">
+      <figcaption style="text-align:center; font-size:0.85em; color:#666;">
+        Mosi-oa-Tunya National Park
+      </figcaption>
+    </figure>
 
-    <img src="{{ '/images/IMG_4405.jpg' | relative_url }}"
-         style="width:100%; border-radius:8px;"
-         alt="Conference">
+    <figure>
+      <img src="{{ '/images/IMG_4405.jpg' | relative_url }}"
+           style="width:100%; border-radius:8px;"
+           alt="Conference">
+      <figcaption style="text-align:center; font-size:0.85em; color:#666;">
+        Kamwala market, Zambia
+      </figcaption>
+    </figure>
 
   </div>
 
