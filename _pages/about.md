@@ -21,7 +21,7 @@ redirect_from:
     </p>
 
     <p>
-      My research focuses on how political power is organized, contested, and perceived across space, with a regional focus on Africa. My current work explores how executive linkage shapes the nationalization of political systems, particularly how local institutions become linked to national politics. I also study geographic variation in political control and power and how these dynamics influence citizens' perceptions of representation and accountability.
+      My research focuses on how political power is organized, contested, and perceived across space, with a regional focus on Africa. I study how political authority varies across territory and how local and national actors become connected, as well as how these dynamics shape citizens' perceptions of representation and accountability. 
     </p>
 
   </div>
