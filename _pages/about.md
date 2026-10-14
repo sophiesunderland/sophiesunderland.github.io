@@ -29,7 +29,7 @@ redirect_from:
   <!-- Right column -->
   <div style="flex:0 0 350px;">
 
-    <h3 style="margin-top:0;">Research Sites</h3>
+    <h3 style="margin-top:0;">Fieldwork and Research Sites</h3>
 
     {% include africa-map.html %}
 
