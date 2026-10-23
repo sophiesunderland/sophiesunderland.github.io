@@ -44,33 +44,24 @@
 
    "custom";
 
-.topo-homepage {
+/* Animated topographic background across the whole page */
+body {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-  padding: 2rem;
-  background: #f5f0e7;
-  border-radius: 4px;
+  background: #f1e7cf;
 }
 
-.topo-homepage__background {
-  position: absolute;
+body > [data-aifx="topo-lines"] {
+  position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
 }
 
-.topo-homepage__content {
+/* Keep the page content above the animation */
+#main,
+.masthead,
+.page__footer {
   position: relative;
-}
-
-.topo-homepage__content h2 {
-  margin-top: 0;
-}
-
-@media (max-width: 600px) {
-  .topo-homepage {
-    padding: 1rem;
-  }
 }
 
