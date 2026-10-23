@@ -18,24 +18,34 @@
 <style>
   /* Top navigation bar */
 
-/* Seamless navigation header */
-.masthead,
-.masthead .masthead__inner-wrap,
-.masthead .greedy-nav {
-  background: transparent !important;
+/* Unified navigation banner */
+.masthead {
+  background: #f1e7cf !important;
+  border-bottom: 1px solid rgba(120, 95, 65, 0.2) !important;
   box-shadow: none !important;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+.masthead .masthead__inner-wrap,
+.masthead .greedy-nav,
+.masthead .greedy-nav .visible-links,
+.masthead .greedy-nav .visible-links li,
+.masthead .greedy-nav .visible-links a {
+  background: #f1e7cf !important;
+  box-shadow: none !important;
+}
+
+.masthead .masthead__inner-wrap {
+  width: 100%;
+}
+
+.masthead .greedy-nav a {
+  color: #5b4633 !important;
   border: none !important;
 }
 
-/* Keep navigation links consistent */
-.masthead a,
-.masthead .greedy-nav a {
-  background: transparent !important;
-  color: #5b4633 !important;
-}
-
-/* Subtle hover effect */
-.masthead a:hover,
 .masthead .greedy-nav a:hover {
   color: #ff5c00 !important;
 }
