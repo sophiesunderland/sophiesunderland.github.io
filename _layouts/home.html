@@ -3,23 +3,26 @@
 layout: default
 ---
 
-<div id="topo-home">
-  {% include topo-background.html %}
-</div>
+{% include topo-background.html %}
 
 <style>
-  /* Remove the normal AcademicPages content/sidebar layout */
-  #topo-home {
+  /* Keep the normal AcademicPages layout and sidebar */
+  #topo-background {
     position: fixed;
     inset: 0;
-    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
   }
 
-  #topo-home #topo-background {
-    position: absolute;
-    inset: 0;
+  #topo-background > div {
     width: 100%;
     height: 100%;
   }
 
+  /* Allow the animation to show through */
+  body {
+    background: transparent;
+  }
 </style>
