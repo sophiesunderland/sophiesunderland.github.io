@@ -130,3 +130,11 @@ html, body {
   margin-top: auto;
 }
 
+/* Hide the AI Designer attribution sticker */
+[data-aifx] a[href*="aifx"],
+a[href*="ai-designer"],
+[class*="watermark"],
+[id*="watermark"] {
+  display: none !important;
+}
+
