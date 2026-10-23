@@ -1,0 +1,265 @@
+/* -----------------------------------------
+   Animated Africa homepage
+   ----------------------------------------- */
+
+.africa-hero {
+  --africa-cream: #fff4e5;
+  --africa-orange: #ff5a1f;
+  --africa-ink: #171513;
+  --africa-muted: #706960;
+
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 90px 6% 100px;
+  margin-bottom: 55px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+  align-items: center;
+  gap: 35px;
+
+  background: var(--africa-cream);
+  color: var(--africa-ink);
+  overflow: hidden;
+}
+
+.africa-hero *,
+.africa-hero *::before,
+.africa-hero *::after {
+  box-sizing: border-box;
+}
+
+.africa-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  animation: africa-intro 1s ease-out both;
+}
+
+.africa-hero__eyebrow {
+  margin: 0 0 22px;
+  color: var(--africa-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.africa-hero__content h1 {
+  margin: 0 0 25px;
+  color: var(--africa-ink);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.africa-hero__description {
+  max-width: 510px;
+  margin: 0 0 24px;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.5;
+}
+
+.africa-hero__detail {
+  color: var(--africa-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.africa-hero__visual {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  justify-self: center;
+}
+
+#africa-network {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Continent outline */
+
+.africa-outline {
+  fill: rgba(255, 90, 31, 0.035);
+  stroke: var(--africa-ink);
+  stroke-width: 1.3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.8;
+}
+
+.africa-outline--island {
+  stroke-width: 1;
+}
+
+/* Animated connecting lines */
+
+.africa-connection {
+  stroke: var(--africa-orange);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  fill: none;
+  opacity: 0;
+  animation: africa-connection-pulse 7s ease-in-out infinite;
+}
+
+/* Animated points */
+
+.africa-point-halo {
+  fill: var(--africa-orange);
+  opacity: 0.12;
+  animation: africa-halo 3.5s ease-in-out infinite;
+}
+
+.africa-point {
+  fill: var(--africa-orange);
+  stroke: var(--africa-cream);
+  stroke-width: 2;
+}
+
+/* Scroll indicator */
+
+.africa-hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 6%;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: var(--africa-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.africa-hero__scroll:hover {
+  color: var(--africa-orange);
+}
+
+.africa-hero__arrow {
+  display: inline-block;
+  color: var(--africa-orange);
+  font-size: 1.4rem;
+  animation: africa-arrow 2s ease-in-out infinite;
+}
+
+/* Animation keyframes */
+
+@keyframes africa-intro {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes africa-connection-pulse {
+  0%, 12%, 100% {
+    opacity: 0.03;
+  }
+
+  35%, 65% {
+    opacity: 0.65;
+  }
+
+  85% {
+    opacity: 0.12;
+  }
+}
+
+@keyframes africa-halo {
+  0%, 100% {
+    opacity: 0.08;
+    transform: scale(0.8);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  50% {
+    opacity: 0.28;
+    transform: scale(1.5);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
+
+@keyframes africa-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Scroll-reveal effect for About Me */
+
+.africa-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.africa-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile layout */
+
+@media (max-width: 800px) {
+  .africa-hero {
+    min-height: auto;
+    min-height: 100svh;
+    padding: 100px 7% 90px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .africa-hero__content {
+    max-width: 600px;
+  }
+
+  .africa-hero__content h1 {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+  }
+
+  .africa-hero__visual {
+    width: min(100%, 400px);
+  }
+
+  .africa-hero__scroll {
+    left: 7%;
+    bottom: 24px;
+  }
+}
+
+/* Respect visitors' motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .africa-hero__content,
+  .africa-hero__arrow,
+  .africa-connection,
+  .africa-point-halo {
+    animation: none !important;
+  }
+
+  .africa-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
