@@ -1,0 +1,25 @@
+
+---
+layout: default
+---
+
+<div id="topo-home">
+  {% include topo-background.html %}
+</div>
+
+<style>
+  /* Remove the normal AcademicPages content/sidebar layout */
+  #topo-home {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+  }
+
+  #topo-home #topo-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
