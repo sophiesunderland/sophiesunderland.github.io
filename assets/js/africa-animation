@@ -1,0 +1,108 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const svg = document.getElementById("africa-network");
+  const pointsLayer = document.getElementById("africa-points");
+  const connectionsLayer = document.getElementById("africa-connections");
+
+  if (!svg || !pointsLayer || !connectionsLayer) return;
+
+  // Decorative positions within the continent.
+  // These are illustrative, not actual research locations.
+  const points = [
+    { x: 190, y: 110 },
+    { x: 280, y: 130 },
+    { x: 325, y: 195 },
+    { x: 240, y: 235 },
+    { x: 160, y: 250 },
+    { x: 285, y: 305 },
+    { x: 220, y: 355 },
+    { x: 270, y: 420 },
+    { x: 225, y: 470 }
+  ];
+
+  // Draw connecting lines.
+  // Each line is animated with a different delay.
+  const connections = [
+    [0, 1],
+    [1, 2],
+    [1, 3],
+    [3, 4],
+    [3, 5],
+    [5, 6],
+    [5, 7],
+    [6, 8],
+    [7, 8],
+    [2, 5],
+    [4, 6]
+  ];
+
+  connections.forEach(function (connection, index) {
+    const start = points[connection[0]];
+    const end = points[connection[1]];
+
+    const line = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "line"
+    );
+
+    line.setAttribute("x1", start.x);
+    line.setAttribute("y1", start.y);
+    line.setAttribute("x2", end.x);
+    line.setAttribute("y2", end.y);
+    line.setAttribute("class", "africa-connection");
+    line.style.animationDelay = `${index * 0.55}s`;
+
+    connectionsLayer.appendChild(line);
+  });
+
+  // Draw glowing points.
+  points.forEach(function (point, index) {
+    const halo = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle"
+    );
+
+    halo.setAttribute("cx", point.x);
+    halo.setAttribute("cy", point.y);
+    halo.setAttribute("r", 7);
+    halo.setAttribute("class", "africa-point-halo");
+    halo.style.animationDelay = `${index * 0.35}s`;
+
+    const dot = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle"
+    );
+
+    dot.setAttribute("cx", point.x);
+    dot.setAttribute("cy", point.y);
+    dot.setAttribute("r", 3.2);
+    dot.setAttribute("class", "africa-point");
+
+    pointsLayer.appendChild(halo);
+    pointsLayer.appendChild(dot);
+  });
+
+  // Reveal sections as visitors scroll.
+  const revealElements = document.querySelectorAll(".africa-reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.forEach(function (element) {
+      observer.observe(element);
+    });
+  } else {
+    revealElements.forEach(function (element) {
+      element.classList.add("is-visible");
+    });
+  }
+});
