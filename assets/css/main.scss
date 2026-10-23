@@ -122,8 +122,11 @@ body {
     color: #5b4633;
   }
 
-/* Reserve space for the fixed navigation */
-body {
-  padding-top: 76px !important;
+html, body {
+  min-height: 100%;
+}
+
+.page__footer {
+  margin-top: auto;
 }
 
