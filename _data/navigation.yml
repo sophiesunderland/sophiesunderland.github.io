@@ -9,7 +9,7 @@
 
 main:
   - title: "About Me"
-    url: /about-me/
+    url: /about/
 
   - title: "Fieldwork & Research Gallery"
     url: /fieldwork-research/
