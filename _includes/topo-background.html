@@ -17,15 +17,23 @@
 
 <style>
   /* Top navigation bar */
-  .masthead {
-    background: transparent !important;
-    border-bottom: 1px solid rgba(120, 95, 65, 0.18) !important;
-    box-shadow: none !important;
-  }
 
-  .masthead a {
-    background: transparent !important;
-  }
+.masthead {
+  background: rgba(247, 240, 225, 0.72) !important;
+  border-bottom: 1px solid rgba(120, 95, 65, 0.12) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.masthead a {
+  background: transparent !important;
+  transition: color 0.2s ease;
+}
+
+.masthead a:hover {
+  color: #ff5c00 !important;
+}
 
   /* Footer */
   .page__footer {
