@@ -1,0 +1,7 @@
+<div
+  data-aifx="topo-lines"
+  data-aifx-colors="#f1e7cf,#e6d2a8,#d4b384,#b98a5e,#ff5c00"
+  data-aifx-density="25"
+  aria-hidden="true"
+  style="position:fixed;inset:0;z-index:-1;pointer-events:none;">
+</div>
