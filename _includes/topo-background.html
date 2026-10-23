@@ -19,20 +19,19 @@
   /* Top navigation bar */
 
 .masthead {
-  background: rgba(247, 240, 225, 0.72) !important;
-  border-bottom: 1px solid rgba(120, 95, 65, 0.12) !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  background: rgba(247, 240, 225, 0.94) !important;
+  border-bottom: 1px solid rgba(120, 95, 65, 0.18) !important;
+  box-shadow: 0 3px 12px rgba(70, 50, 30, 0.05) !important;
 }
 
 .masthead a {
   background: transparent !important;
-  transition: color 0.2s ease;
-}
-
-.masthead a:hover {
-  color: #ff5c00 !important;
 }
 
   /* Footer */
