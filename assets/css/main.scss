@@ -43,3 +43,34 @@
     "vendor/magnific-popup/magnific-popup",
 
    "custom";
+
+.topo-homepage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2rem;
+  background: #f5f0e7;
+  border-radius: 4px;
+}
+
+.topo-homepage__background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.topo-homepage__content {
+  position: relative;
+}
+
+.topo-homepage__content h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .topo-homepage {
+    padding: 1rem;
+  }
+}
+
