@@ -18,20 +18,26 @@
 <style>
   /* Top navigation bar */
 
-.masthead {
-  position: sticky !important;
-  top: 0;
-  z-index: 1000;
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  background: rgba(247, 240, 225, 0.94) !important;
-  border-bottom: 1px solid rgba(120, 95, 65, 0.18) !important;
-  box-shadow: 0 3px 12px rgba(70, 50, 30, 0.05) !important;
+/* Seamless navigation header */
+.masthead,
+.masthead .masthead__inner-wrap,
+.masthead .greedy-nav {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.masthead a {
+/* Keep navigation links consistent */
+.masthead a,
+.masthead .greedy-nav a {
   background: transparent !important;
+  color: #5b4633 !important;
+}
+
+/* Subtle hover effect */
+.masthead a:hover,
+.masthead .greedy-nav a:hover {
+  color: #ff5c00 !important;
 }
 
   /* Footer */
