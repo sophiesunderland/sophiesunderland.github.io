@@ -138,3 +138,37 @@ a[href*="ai-designer"],
   display: none !important;
 }
 
+```css
+/* Vanta animated background */
+#vanta-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep the existing website layout above the animation */
+#main,
+#site-nav,
+.masthead,
+.page__footer,
+.sidebar,
+.initial-content,
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* Allow the animation to show through the page */
+body {
+  background: transparent;
+}
+
+.initial-content,
+.page {
+  background-color: transparent;
+}
+```
+
