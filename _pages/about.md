@@ -8,7 +8,7 @@ redirect_from:
 layout: default
 ---
 
-{% include vanta-topology.html %}
+{% include topo-background.html %}
 
 <div style="
   min-height: 75vh;
