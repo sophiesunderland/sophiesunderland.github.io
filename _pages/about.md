@@ -8,7 +8,7 @@ redirect_from:
 layout: default
 ---
 
-{% include topo-background.html %}
+{% include topo-new.html %}
 
 <div style="
   min-height: 75vh;
