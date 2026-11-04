@@ -1,0 +1,164 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Topographic Drift</title>
+<style>
+    :root {
+        --bg-color: #f1e7cf;
+        --line-color: #b98a5e;
+        --peak-color: #ff5c00;
+    }
+
+    * { margin: 0; padding: 0; }
+
+    body {
+        height: 100vh;
+        background: var(--bg-color);
+        overflow: hidden;
+    }
+
+    canvas {
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <canvas id="c"></canvas>
+
+<script>
+    const cv = document.getElementById('c');
+    const ctx = cv.getContext('2d');
+
+    const css = getComputedStyle(document.documentElement);
+    const bg = css.getPropertyValue('--bg-color').trim();
+    const lineCol = css.getPropertyValue('--line-color').trim();
+    const peakCol = css.getPropertyValue('--peak-color').trim();
+
+    const CELL = 12;
+    const LEVELS = 18;
+
+    let w, h, cols, rows;
+
+    function build() {
+        w = cv.width = innerWidth;
+        h = cv.height = innerHeight;
+        cols = Math.ceil(w / CELL) + 1;
+        rows = Math.ceil(h / CELL) + 1;
+    }
+
+    addEventListener('resize', build);
+    build();
+
+    function fieldVal(gx, gy, t) {
+        const x = gx * CELL, y = gy * CELL;
+        const s = 0.0042;
+
+        let v = Math.sin(x * s + t) * Math.cos(y * s * 1.2 - t * 0.5)
+              + Math.sin((x - y) * s * 0.8 + t * 0.6) * 0.8
+              + Math.cos(Math.hypot(x - w / 2, y - h / 2) * s * 1.1 - t) * 0.6
+              + Math.sin(x * s * 2.1 - y * s * 1.7 + t * 0.3) * 0.4;
+
+        return (v / 2.8) * 0.5 + 0.5;
+    }
+
+    function lerp(a, b, iso) {
+        return (iso - a) / (b - a);
+    }
+
+    function step(t) {
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, w, h);
+
+        const grid = new Float32Array(cols * rows);
+
+        for (let j = 0; j < rows; j++)
+            for (let i = 0; i < cols; i++)
+                grid[j * cols + i] = fieldVal(i, j, t);
+
+        for (let l = 1; l < LEVELS; l++) {
+            const iso = l / LEVELS;
+            const isPeak = l >= LEVELS - 2;
+
+            ctx.strokeStyle = isPeak ? peakCol : lineCol;
+            ctx.globalAlpha = isPeak ? 0.9 : 0.35 + (l / LEVELS) * 0.4;
+            ctx.lineWidth = isPeak ? 1.4 : 1;
+            ctx.beginPath();
+
+            for (let j = 0; j < rows - 1; j++) {
+                for (let i = 0; i < cols - 1; i++) {
+                    const tl = grid[j * cols + i];
+                    const tr = grid[j * cols + i + 1];
+                    const br = grid[(j + 1) * cols + i + 1];
+                    const bl = grid[(j + 1) * cols + i];
+
+                    let ci = 0;
+
+                    if (tl > iso) ci |= 8;
+                    if (tr > iso) ci |= 4;
+                    if (br > iso) ci |= 2;
+                    if (bl > iso) ci |= 1;
+
+                    if (ci === 0 || ci === 15) continue;
+
+                    const x0 = i * CELL, y0 = j * CELL;
+
+                    const T = {
+                        x: x0 + lerp(tl, tr, iso) * CELL,
+                        y: y0
+                    };
+
+                    const R = {
+                        x: x0 + CELL,
+                        y: y0 + lerp(tr, br, iso) * CELL
+                    };
+
+                    const Bt = {
+                        x: x0 + lerp(bl, br, iso) * CELL,
+                        y: y0 + CELL
+                    };
+
+                    const L = {
+                        x: x0,
+                        y: y0 + lerp(tl, bl, iso) * CELL
+                    };
+
+                    const seg = (p, q) => {
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(q.x, q.y);
+                    };
+
+                    switch (ci) {
+                        case 1: case 14: seg(L, Bt); break;
+                        case 2: case 13: seg(Bt, R); break;
+                        case 3: case 12: seg(L, R); break;
+                        case 4: case 11: seg(T, R); break;
+                        case 5: seg(L, T); seg(Bt, R); break;
+                        case 6: case 9: seg(T, Bt); break;
+                        case 7: case 8: seg(L, T); break;
+                        case 10: seg(T, R); seg(L, Bt); break;
+                    }
+                }
+            }
+
+            ctx.stroke();
+        }
+
+        ctx.globalAlpha = 1;
+    }
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        step(1.5);
+    } else {
+        let t = 0;
+
+        (function loop() {
+            t += 0.004;
+            step(t);
+            requestAnimationFrame(loop);
+        })();
+    }
+</script>
+</body>
+</html>
+```
