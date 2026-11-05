@@ -4,7 +4,15 @@
 </script>
 
 <bb-contour-flow
-  style="display: block; width: 100%; height: 500px; border-radius: 15px;"
+  style="
+    display: block;
+    position: fixed;
+    inset: 76px 0 0 0;
+    width: 100%;
+    height: calc(100vh - 76px);
+    z-index: 0;
+    pointer-events: none;
+  "
   particle-amount="4500"
   particle-life="6"
   flow-speed="132"
