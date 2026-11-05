@@ -8,16 +8,17 @@ redirect_from:
 layout: default
 ---
 
-<!-- Animated banner -->
-<div style="width: 100%; margin-bottom: 25px;">
-  {% include bb-topo.html %}
-</div>
+{% include bb-topo.html %}
 
-<!-- Centered paragraph box -->
 <div style="
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 76px);
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 0 20px 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 ">
 
   <div style="
