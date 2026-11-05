@@ -8,15 +8,16 @@ redirect_from:
 layout: default
 ---
 
-{% include bb-topo.html %}
+<!-- Animated banner -->
+<div style="width: 100%; margin-bottom: 25px;">
+  {% include bb-topo.html %}
+</div>
 
+<!-- Centered paragraph box -->
 <div style="
-  min-height: 75vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  padding: 0 20px 40px;
 ">
 
   <div style="
@@ -24,7 +25,7 @@ layout: default
     max-width: 750px;
     padding: 35px 40px;
     box-sizing: border-box;
-    background: rgba(241, 231, 207, 0.92);
+    background: rgba(241, 231, 207, 0.94);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(70, 50, 30, 0.10);
     color: #463626;
